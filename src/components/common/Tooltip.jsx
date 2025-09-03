@@ -4,7 +4,7 @@
  * This component displays a tooltip when hovering over its children.
  */
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 
 const Tooltip = ({
   children,
@@ -24,7 +24,7 @@ const Tooltip = ({
   const timeoutRef = useRef(null)
   
   // Calculate the position of the tooltip
-  const calculatePosition = () => {
+  const calculatePosition = useCallback(() => {
     if (!targetRef.current || !tooltipRef.current) return
     
     const targetRect = targetRef.current.getBoundingClientRect()
@@ -76,7 +76,7 @@ const Tooltip = ({
     }
     
     setTooltipPosition({ top, left })
-  }
+  }, [position])
   
   // Show the tooltip
   const showTooltip = () => {
