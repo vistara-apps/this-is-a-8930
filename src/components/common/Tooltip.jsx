@@ -112,7 +112,7 @@ const Tooltip = ({
       window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleResize)
     }
-  }, [isVisible])
+  }, [isVisible, calculatePosition])
   
   // Clean up timeout on unmount
   useEffect(() => {

@@ -311,7 +311,7 @@ class Widget {
    * @returns {Object} The generated category data
    */
   static generateMockCategoryData(dataSourceType, dataQuery) {
-    const { metrics, dimensions, period } = dataQuery
+    const { dimensions } = dataQuery
     let labels = []
     let data = []
     
@@ -377,7 +377,7 @@ class Widget {
    */
   static generateMockTableData(widget) {
     const { data_source_type, data_query } = widget
-    const { metrics, dimensions, period } = data_query
+    const { dimensions } = data_query
     const rowCount = 10
     
     let columns = []
