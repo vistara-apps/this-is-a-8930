@@ -16,7 +16,7 @@ import LoadingIndicator from './common/LoadingIndicator'
 import ErrorBoundary from './common/ErrorBoundary'
 
 const AppShell = () => {
-  const { user, isLoading, error } = useAuth()
+  const { isLoading, error } = useAuth()
   const [currentView, setCurrentView] = useState('dashboard')
   
   // Show loading indicator while loading
@@ -95,4 +95,3 @@ const AppShell = () => {
 }
 
 export default AppShell
-

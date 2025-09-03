@@ -162,13 +162,13 @@ const Signup = ({ onSuccess, onSignIn }) => {
             />
             <label htmlFor="agree-terms" className="ml-2 block text-sm text-dark-text">
               I agree to the{' '}
-              <a href="#" className="text-accent hover:text-accent/80 transition-colors duration-200">
+              <button type="button" onClick={() => window.open('/terms', '_blank')} className="text-accent hover:text-accent/80 transition-colors duration-200">
                 Terms of Service
-              </a>{' '}
+              </button>{' '}
               and{' '}
-              <a href="#" className="text-accent hover:text-accent/80 transition-colors duration-200">
+              <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-accent hover:text-accent/80 transition-colors duration-200">
                 Privacy Policy
-              </a>
+              </button>
             </label>
           </div>
           {termsError && (
@@ -214,4 +214,3 @@ const Signup = ({ onSuccess, onSignIn }) => {
 }
 
 export default Signup
-

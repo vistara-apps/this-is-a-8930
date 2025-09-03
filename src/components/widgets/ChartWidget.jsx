@@ -5,7 +5,7 @@
  */
 
 import React, { useState } from 'react'
-import { MoreHorizontal, Edit, Trash2, RefreshCw, BarChart2, LineChart, PieChart } from 'lucide-react'
+import { MoreHorizontal, Edit, Trash2 } from 'lucide-react'
 
 const ChartWidget = ({ widget, onEdit, onDelete }) => {
   const [showMenu, setShowMenu] = useState(false)
@@ -133,7 +133,7 @@ const ChartWidget = ({ widget, onEdit, onDelete }) => {
   // Render a bar chart
   const renderBarChart = () => {
     const { labels, datasets } = data
-    const { colors, showGrid, stacked, horizontal } = visualization_config || {}
+    const { colors, showGrid, stacked } = visualization_config || {}
     
     // Calculate the maximum value for scaling
     const maxValue = Math.max(...datasets.flatMap(dataset => dataset.data))
@@ -189,7 +189,7 @@ const ChartWidget = ({ widget, onEdit, onDelete }) => {
   // Render a pie chart
   const renderPieChart = () => {
     const { labels, datasets } = data
-    const { colors, innerRadius, showLabels } = visualization_config || {}
+    const { colors, innerRadius } = visualization_config || {}
     
     // Calculate the total value
     const total = datasets[0]?.data.reduce((sum, value) => sum + value, 0) || 0
@@ -332,4 +332,3 @@ const ChartWidget = ({ widget, onEdit, onDelete }) => {
 }
 
 export default ChartWidget
-

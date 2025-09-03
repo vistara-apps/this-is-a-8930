@@ -13,7 +13,6 @@ import ErrorMessage from './common/ErrorMessage'
 import { 
   User, 
   Bell, 
-  Globe, 
   Palette, 
   Shield, 
   CreditCard,
@@ -23,7 +22,7 @@ import {
 
 const SettingsView = () => {
   const { user, updateProfile, updatePreferences, isLoading: authLoading, error: authError, clearError: clearAuthError } = useAuth()
-  const { dataSources, isLoading: appLoading, error: appError, clearError: clearAppError } = useApp()
+  const { isLoading: appLoading, error: appError, clearError: clearAppError } = useApp()
   
   const [activeTab, setActiveTab] = useState('account')
   const [isSaving, setIsSaving] = useState(false)
@@ -709,4 +708,3 @@ const SettingsView = () => {
 }
 
 export default SettingsView
-

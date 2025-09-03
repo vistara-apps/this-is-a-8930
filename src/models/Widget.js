@@ -275,7 +275,7 @@ class Widget {
    * @returns {Object} The generated time series data
    */
   static generateMockTimeSeriesData(dataSourceType, dataQuery) {
-    const { metrics, dimensions, period, limit } = dataQuery
+    const { metrics, period } = dataQuery
     const days = period === 'last-7-days' ? 7 : period === 'last-30-days' ? 30 : 14
     
     // Generate dates
@@ -311,7 +311,7 @@ class Widget {
    * @returns {Object} The generated category data
    */
   static generateMockCategoryData(dataSourceType, dataQuery) {
-    const { metrics, dimensions, period, limit } = dataQuery
+    const { metrics, dimensions, period } = dataQuery
     let labels = []
     let data = []
     
@@ -377,8 +377,8 @@ class Widget {
    */
   static generateMockTableData(widget) {
     const { data_source_type, data_query } = widget
-    const { metrics, dimensions, period, limit } = data_query
-    const rowCount = limit || 10
+    const { metrics, dimensions, period } = data_query
+    const rowCount = 10
     
     let columns = []
     let rows = []
@@ -500,4 +500,3 @@ class Widget {
 }
 
 export default Widget
-

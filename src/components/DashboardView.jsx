@@ -6,12 +6,12 @@
 
 import React, { useState } from 'react'
 import { useApp } from '../context/AppContext'
-import LoadingIndicator, { WidgetSkeletonLoader } from './common/LoadingIndicator'
+import LoadingIndicator from './common/LoadingIndicator'
 import ErrorMessage from './common/ErrorMessage'
 import MetricWidget from './widgets/MetricWidget'
 import ChartWidget from './widgets/ChartWidget'
 import TableWidget from './widgets/TableWidget'
-import { Plus, MoreHorizontal, Edit, Trash2, Copy, RefreshCw } from 'lucide-react'
+import { Plus, MoreHorizontal, Edit, Trash2 } from 'lucide-react'
 
 const DashboardView = () => {
   const { 
@@ -21,8 +21,6 @@ const DashboardView = () => {
     createDashboard, 
     updateDashboard, 
     deleteDashboard, 
-    addWidget, 
-    updateWidget, 
     removeWidget, 
     isLoading, 
     error, 
@@ -429,4 +427,3 @@ const DashboardView = () => {
 }
 
 export default DashboardView
-

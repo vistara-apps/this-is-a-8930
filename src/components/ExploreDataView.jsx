@@ -4,7 +4,7 @@
  * This component allows users to search and explore data from all connected data sources.
  */
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useApp } from '../context/AppContext'
 import useSearch from '../hooks/useSearch'
 import LoadingIndicator from './common/LoadingIndicator'
@@ -21,9 +21,7 @@ const ExploreDataView = () => {
     totalPages, 
     isLoading, 
     error, 
-    search, 
     changePage, 
-    changePageSize, 
     clearError 
   } = useSearch()
   
@@ -359,4 +357,3 @@ const ExploreDataView = () => {
 }
 
 export default ExploreDataView
-

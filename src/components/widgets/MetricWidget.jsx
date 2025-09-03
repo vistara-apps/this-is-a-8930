@@ -5,7 +5,7 @@
  */
 
 import React, { useState } from 'react'
-import { MoreHorizontal, Edit, Trash2, RefreshCw, ArrowUp, ArrowDown } from 'lucide-react'
+import { MoreHorizontal, Edit, Trash2, ArrowUp, ArrowDown } from 'lucide-react'
 import Tooltip from '../common/Tooltip'
 
 const MetricWidget = ({ widget, onEdit, onDelete }) => {
@@ -58,7 +58,7 @@ const MetricWidget = ({ widget, onEdit, onDelete }) => {
     )
   }
   
-  const { value, previousValue, change, changePercent, trend } = data
+  const { value, previousValue, changePercent, trend } = data
   
   // Format the value based on the visualization configuration
   const formatValue = (val) => {
@@ -169,4 +169,3 @@ const MetricWidget = ({ widget, onEdit, onDelete }) => {
 }
 
 export default MetricWidget
-

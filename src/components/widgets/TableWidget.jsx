@@ -5,7 +5,7 @@
  */
 
 import React, { useState } from 'react'
-import { MoreHorizontal, Edit, Trash2, RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react'
+import { MoreHorizontal, Edit, Trash2, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const TableWidget = ({ widget, onEdit, onDelete }) => {
   const [showMenu, setShowMenu] = useState(false)
@@ -208,4 +208,3 @@ const TableWidget = ({ widget, onEdit, onDelete }) => {
 }
 
 export default TableWidget
-

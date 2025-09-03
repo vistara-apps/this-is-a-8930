@@ -8,7 +8,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { useApp } from '../context/AppContext'
 
 const useSearch = () => {
-  const { dataPoints, searchQuery, selectedFilters, searchDataPoints } = useApp()
+  const { searchQuery, selectedFilters, searchDataPoints } = useApp()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
   const [results, setResults] = useState([])
@@ -169,4 +169,3 @@ const useSearch = () => {
 }
 
 export default useSearch
-
